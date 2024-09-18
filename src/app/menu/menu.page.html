@@ -1,0 +1,26 @@
+
+<ion-list>
+  <ion-list-header>
+    <ion-toolbar>
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-list-header>
+  <ion-menu-toggle auto-hide="false">
+    <ion-item [routerLink]="['/home']">
+      <ion-icon name="home" slot="start"></ion-icon>
+      <ion-label>Accueil</ion-label>
+    </ion-item>
+  </ion-menu-toggle>
+  <ion-menu-toggle auto-hide="false">
+    <ion-item [routerLink]="['/doglist']">
+      <ion-icon name="people" slot="start"></ion-icon>
+      <ion-label>Liste des chiens</ion-label>
+    </ion-item>
+  </ion-menu-toggle>
+  <ion-menu-toggle auto-hide="false">
+    <ion-item [routerLink]="['/adddog']">
+      <ion-icon name="people" slot="start"></ion-icon>
+      <ion-label>Ajouter un chien</ion-label>
+    </ion-item>
+  </ion-menu-toggle>
+</ion-list>

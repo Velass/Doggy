@@ -43,3 +43,7 @@ Doggy est une application mobile développée avec Ionic et Angular qui permet a
 - **Ionic** pour le développement mobile hybride.
 - **Angular** pour la logique côté client.
 - **Capacitor** pour les fonctionnalités natives comme la géolocalisation, la caméra et le partage.
+
+---
+
+*Ce fichier `README.md` a été généré avec l'aide de ChatGPT, basé sur les informations et la structure fournies par l'auteur du projet.*
