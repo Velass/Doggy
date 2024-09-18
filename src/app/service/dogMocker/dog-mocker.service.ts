@@ -1,0 +1,58 @@
+import { Injectable } from '@angular/core';
+import { Dog } from 'src/app/model/dog.model';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class DogMockerService {
+
+  private dogs: Dog[] = [
+    {
+      id: 1,
+      name: "Alvin",
+      race: "Malamute ",
+      address: "Montpellier",
+      description: "",
+      photo: "https://images.dog.ceo/breeds/malamute/n02110063_1034.jpg"
+    },
+    {
+      id: 2,
+      name: "Betsy",
+      race: "Schipperke",
+      address: "Montpellier",
+      description: "",
+      photo: "https://images.dog.ceo/breeds/schipperke/n02104365_6755.jpg"
+    },
+    {
+      id: 3,
+      name: "Chad",
+      race: "Yorkshire",
+      address: "Montpellier",
+      description: "",
+      photo: "https://images.dog.ceo/breeds/terrier-yorkshire/n02094433_2328.jpg"
+    },
+    {
+      id: 4,
+      name: "Annie",
+      race: "rottweiler ",
+      address: "Montpellier",
+      description: "",
+      photo: "https://images.dog.ceo/breeds/rottweiler/n02106550_10966.jpg"
+    },
+    {
+      id: 5,
+      name: "Dixon",
+      race: "labrador ",
+      address: "Montpellier",
+      description: "",
+      photo: "https://images.dog.ceo/breeds/labrador/n02099712_209.jpg"
+    },
+  ]
+
+  constructor() { }
+
+  getAll(){
+    return this.dogs;
+  }
+  
+}
