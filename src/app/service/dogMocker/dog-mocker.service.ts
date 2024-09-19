@@ -12,7 +12,7 @@ export class DogMockerService {
       name: "Alvin",
       race: "Malamute ",
       address: "Montpellier",
-      description: "",
+      description: "testttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttt",
       photo: "https://images.dog.ceo/breeds/malamute/n02110063_1034.jpg"
     },
     {
@@ -53,6 +53,16 @@ export class DogMockerService {
 
   getAll(){
     return this.dogs;
+  }
+
+  addDog(dog : Dog){
+    const newId = this.dogs.length + 1;
+    const newDog = {...dog, id: newId}
+    this.dogs.push(newDog)
+  }
+
+  deleteDog(id: number) {
+    this.dogs = this.dogs.filter(dog => dog.id !== id);
   }
   
 }

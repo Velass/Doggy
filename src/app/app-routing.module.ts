@@ -19,6 +19,14 @@ const routes: Routes = [
     path: 'dog-list',
     loadChildren: () => import('./dog-list/dog-list.module').then( m => m.DogListPageModule)
   },
+  {
+    path: 'add-dog',
+    loadChildren: () => import('./add-dog/add-dog.module').then( m => m.AddDogPageModule)
+  },
+  {
+    path: 'detail-dog/:id',
+    loadChildren: () => import('./detail-dog/detail-dog.module').then( m => m.DetailDogPageModule)
+  },
 ];
 
 @NgModule({

@@ -4,18 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { DogListPageRoutingModule } from './dog-list-routing.module';
+import { DetailDogPageRoutingModule } from './detail-dog-routing.module';
 
-import { DogListPage } from './dog-list.page';
+import { DetailDogPage } from './detail-dog.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    DogListPageRoutingModule
+    DetailDogPageRoutingModule
   ],
-  declarations: [DogListPage],
-  exports: [DogListPage]
+  declarations: [DetailDogPage]
 })
-export class DogListPageModule {}
+export class DetailDogPageModule {}

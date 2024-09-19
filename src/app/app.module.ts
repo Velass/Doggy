@@ -8,10 +8,11 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { MenuPageModule } from './menu/menu.module';
 import { provideHttpClient } from '@angular/common/http';
+import { DogListPageModule } from './dog-list/dog-list.module';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, MenuPageModule,],
+  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, MenuPageModule, DogListPageModule],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy,},
     provideHttpClient()
   ],

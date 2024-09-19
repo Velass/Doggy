@@ -1,13 +1,32 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>dogList</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Liste des Chiens</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">dogList</ion-title>
+      <ion-title size="large">Liste des Chiens</ion-title>
     </ion-toolbar>
   </ion-header>
+
+  @for (dog of dogs; track $index) {
+  <ion-card>
+    <img [src]="dog.photo" />
+    <ion-card-header>
+      <ion-card-title>{{dog.name}}</ion-card-title>
+      <ion-card-subtitle>Race: {{dog.race}}</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <h3>Adresse : {{dog.address}}</h3>
+    </ion-card-content>
+    <ion-button (click)="share(dog.id)">
+      SHARE
+    </ion-button>
+  </ion-card>
+  }
 </ion-content>
