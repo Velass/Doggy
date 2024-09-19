@@ -64,5 +64,16 @@ export class DogMockerService {
   deleteDog(id: number) {
     this.dogs = this.dogs.filter(dog => dog.id !== id);
   }
+
+  getDogById(id: number): Dog |undefined {
+    return this.dogs.find(dog => dog.id === id);
+  }
+  
+  updateDog(id: number, updatedDog: Partial<Dog>) {
+    const dogIndex = this.dogs.findIndex(dog => dog.id === id);
+    if (dogIndex !== -1) {
+      this.dogs[dogIndex] = { ...this.dogs[dogIndex], ...updatedDog };
+    }
+  }
   
 }

@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { DogMockerService } from '../service/dogMocker/dog-mocker.service';
 import { NavController } from '@ionic/angular';
+import { PhotoService } from '../service/photoCapacitor/photo.service';
 
 @Component({
   selector: 'app-add-dog',
@@ -9,12 +10,14 @@ import { NavController } from '@ionic/angular';
   styleUrls: ['./add-dog.page.scss'],
 })
 export class AddDogPage {
+  photo: string | undefined;
   dogForm: FormGroup;
 
   constructor(
     private fb: FormBuilder,
     private dogService: DogMockerService,
-    private navCtrl: NavController
+    private navCtrl: NavController,
+    private photoService: PhotoService
   ) {
     this.dogForm = this.fb.group({
       name: ['', Validators.required],
@@ -31,5 +34,10 @@ export class AddDogPage {
       this.dogService.addDog(newDog);
       this.navCtrl.navigateBack('/dog-list'); 
     }
+  }
+
+  async selectOrCapturePhoto(){
+    const image = await this.photoService.selectOrTakePhoto();
+    this.photo = image.webPath;
   }
 }

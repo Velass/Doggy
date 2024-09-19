@@ -1,13 +1,37 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>detailDog</ion-title>
+    <ion-title>Détail du Chien</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">detailDog</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
+  <form [formGroup]="dogForm" (ngSubmit)="updateDog()">
+    <ion-item>
+      <ion-label position="floating">Nom du chien</ion-label>
+      <ion-input formControlName="name"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Race</ion-label>
+      <ion-input formControlName="race"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Adresse</ion-label>
+      <ion-input formControlName="address"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Description</ion-label>
+      <ion-textarea formControlName="description"></ion-textarea>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">URL de la photo</ion-label>
+      <ion-input formControlName="photo"></ion-input>
+    </ion-item>
+
+    <ion-button expand="full" type="submit" (click)="updateDog()">Modifier</ion-button>
+    <ion-button expand="full" color="danger" (click)="deleteDog()">Supprimer</ion-button>
+  </form>
 </ion-content>

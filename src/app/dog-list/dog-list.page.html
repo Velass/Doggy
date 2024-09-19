@@ -14,8 +14,8 @@
     </ion-toolbar>
   </ion-header>
 
-  @for (dog of dogs; track $index) {
-  <ion-card>
+  @for (dog of dogs; track $index ) {
+  <ion-card (click)="goToDetail(dog.id)">
     <img [src]="dog.photo" />
     <ion-card-header>
       <ion-card-title>{{dog.name}}</ion-card-title>
@@ -24,7 +24,7 @@
     <ion-card-content>
       <h3>Adresse : {{dog.address}}</h3>
     </ion-card-content>
-    <ion-button (click)="share(dog.id)">
+    <ion-button (click)="share(dog.id, $event)">
       SHARE
     </ion-button>
   </ion-card>
