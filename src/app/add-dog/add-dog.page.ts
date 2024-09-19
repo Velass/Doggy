@@ -36,8 +36,16 @@ export class AddDogPage {
     }
   }
 
-  async selectOrCapturePhoto(){
-    const image = await this.photoService.selectOrTakePhoto();
-    this.photo = image.webPath;
+  async selectOrCapturePhoto() {
+    try {
+      const image = await this.photoService.selectOrTakePhoto();
+      if (image && image.webPath) {
+        this.dogForm.patchValue({
+          photo: image.webPath
+        });
+      }
+    } catch (error) {
+      console.error('Erreur lors de la sélection ou capture de la photo', error);
+    }
   }
 }

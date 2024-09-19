@@ -29,7 +29,8 @@ export class PhotoService {
     const image = await Camera.getPhoto({
       resultType: CameraResultType.Uri,
       source: CameraSource.Prompt,
-      quality: 90
+      quality: 90,
+      saveToGallery: true
     })
     return image
   }
