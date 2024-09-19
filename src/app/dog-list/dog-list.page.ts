@@ -17,7 +17,11 @@ export class DogListPage implements OnInit {
   constructor(private dogMockerService: DogMockerService, private router: Router) { }
 
   ngOnInit() {
-    this.dogs = this.dogMockerService.getAll();
+    this.loadDogs();
+  }
+  
+  ionViewWillEnter() {
+    this.loadDogs(); 
   }
 
   async share(dogid: number, event: Event) {
@@ -33,6 +37,10 @@ export class DogListPage implements OnInit {
 
   goToDetail(dogId: number) {
     this.router.navigate(['/detail-dog', dogId]);
+
+  }
+  loadDogs(){
+    this.dogs = this.dogMockerService.getAll();
   }
 
 }

@@ -28,7 +28,10 @@
 
     <ion-item>
       <ion-label position="floating">URL de la photo</ion-label>
-      <ion-input formControlName="photo"></ion-input>
+      <ion-input formControlName="photo" type="text"></ion-input>
+      <ion-button (click)="selectOrCapturePhoto()">
+        <ion-icon name="camera-outline"></ion-icon>
+      </ion-button>
     </ion-item>
 
     <ion-button expand="full" type="submit" (click)="updateDog()">Modifier</ion-button>

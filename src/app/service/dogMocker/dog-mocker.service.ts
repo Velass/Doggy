@@ -52,7 +52,7 @@ export class DogMockerService {
   constructor() { }
 
   getAll(){
-    return this.dogs;
+    return [...this.dogs];
   }
 
   addDog(dog : Dog){
@@ -63,6 +63,7 @@ export class DogMockerService {
 
   deleteDog(id: number) {
     this.dogs = this.dogs.filter(dog => dog.id !== id);
+    return [...this.dogs]
   }
 
   getDogById(id: number): Dog |undefined {
