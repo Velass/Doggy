@@ -4,6 +4,8 @@ import { Camera, CameraResultType, CameraSource } from '@capacitor/camera';
 @Injectable({
   providedIn: 'root'
 })
+
+/* Service camera de capacitor */
 export class PhotoService {
   takePicture = async () => {
     const image = await Camera.getPhoto({

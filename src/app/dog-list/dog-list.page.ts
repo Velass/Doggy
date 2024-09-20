@@ -20,10 +20,11 @@ export class DogListPage implements OnInit {
     this.loadDogs();
   }
   
+  /* Cela permet de mettre à jour la page quand on la regarde utile quand je supprime un chien */
   ionViewWillEnter() {
     this.loadDogs(); 
   }
-
+  /* Module share qui permet de partager les informations d'un chien */
   async share(dogid: number, event: Event) {
     event.stopPropagation();
     const dog = this.dogs.find(d => d.id === dogid)

@@ -35,7 +35,7 @@ export class AddDogPage {
       this.navCtrl.navigateBack('/dog-list'); 
     }
   }
-
+/* Utilisation du service Camera pour prendre ou sélectionner une photo */
   async selectOrCapturePhoto() {
     try {
       const image = await this.photoService.selectOrTakePhoto();

@@ -10,6 +10,7 @@ export class DogApiService {
 
   constructor(private http: HttpClient) { }
 
+  /* Appel de l'api dogapi pour récuperer une image de chien aléatoire */
   getRandomDog(): Observable<any> {
     return this.http.get<any>(this.apiUrl);
   }

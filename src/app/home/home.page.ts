@@ -15,7 +15,7 @@ export class HomePage implements OnInit {
   ngOnInit(){
     this.RandomImage()
   }
-
+  /* Utilisation de l'api dogApi pour avoir une image aléatoire de chien */
   RandomImage(){
     this.dogService.getRandomDog().subscribe(res =>
       this.imgDog = res.message
