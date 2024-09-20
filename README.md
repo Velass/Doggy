@@ -15,7 +15,7 @@ Doggy est une application mobile développée avec Ionic et Angular qui permet a
   - **Lieu** : Le lieu où se trouve le chien.
   - **Bouton de partage** : Un bouton permettant de partager les informations du chien.
   
-- En haut de la page, l'utilisateur peut voir le lieu des chiens grâce à la géolocalisation. Si la géolocalisation est activée.
+- En haut de la page, l'utilisateur mettre un lieu pour rechercher des chiens a cet endroit. "à venir"
   
 - **Carte du chien** : Lorsque l'utilisateur clique sur la carte d'un chien, il est redirigé vers une page détaillant plus d'informations sur ce chien (photo, nom, race, lieu, description...).
 
@@ -28,7 +28,7 @@ Doggy est une application mobile développée avec Ionic et Angular qui permet a
   - **Description (optionnelle)** : Une description facultative du chien.
   
 ## Fonctionnalités futures
-- **Géolocalisation** : Utiliser Capacitor pour activer la géolocalisation et déterminer automatiquement le lieu lors de l'ajout ou de la consultation des chiens.
+- **Haptic** : Utiliser Capacitor pour activer la Vibration a la suppression d'un chien.
 - **Caméra** : Utiliser Capacitor pour permettre à l'utilisateur de prendre des photos des chiens directement via l'application.
 - **Share** : Utiliser Capacitor pour partager les informations des chiens.
 
@@ -36,7 +36,7 @@ Doggy est une application mobile développée avec Ionic et Angular qui permet a
 1. **Implémenter la page d'accueil** avec un chien aléatoire et une explication rapide de l'application.
 2. **Créer la liste des chiens** avec la géolocalisation et la possibilité de partager les informations des chiens.
 3. **Implémenter la fonctionnalité d'ajout de chien** via un formulaire avec la prise de photo et les détails du chien.
-4. **Géolocalisation** sur la liste des chiens et sur la page d'ajout.
+4. **Recherche par lieux** sur la liste des chiens. "à venir"
 5. **Ajout des détails du chien** lors du clic sur la carte du chien.
 
 ## Technologies utilisées
