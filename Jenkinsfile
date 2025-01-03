@@ -11,6 +11,7 @@ pipeline {
     }
     stage ('Dependencies') {
       steps {
+        sh 'npm install -g @ionic/cli' // Installe Ionic CLI globalement
         sh 'npm install' // Installer les dépendances
       }
     }
