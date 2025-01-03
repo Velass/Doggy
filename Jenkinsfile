@@ -1,7 +1,7 @@
 pipeline {
   agent any
   tools {
-    nodejs 'NodeJs' // Assurez-vous que 'NodeJs' est configuré dans Jenkins
+    nodejs 'NodeJs' // NodeJs' est configuré dans Jenkins
   }
   stages {
     stage ('Checkout') {
